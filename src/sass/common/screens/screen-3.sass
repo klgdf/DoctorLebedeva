@@ -1,0 +1,43 @@
+.screen-3
+  &__row
+    display: flex
+    gap: 18px
+    @media (max-width: 991px)
+      flex-direction: column
+  &__left
+    @media (max-width: 991px)
+      order: 2
+    & .title-tag
+      margin-bottom: 40px
+  &__right
+    @media (max-width: 991px)
+      order: 1
+  &__point
+    display: flex
+    gap: 16px
+    color: var(--secondary)
+    padding: 24px 29px 24px 24px
+    border-radius: var(--br)
+    border: 1px solid var(--third)
+    margin-bottom: 16px
+    &::before
+      content: ''
+      display: block
+      min-width: 20px
+      width: 20px
+      height: 20px
+      border-radius: 4px
+      background: var(--secondary)
+      margin-top: 4px
+    &:last-child
+      margin-bottom: 0
+  &__info
+    margin-bottom: 26px
+  &__notice
+    +text-3
+    opacity: 0.2
+    @media (max-width: 991px)
+      color: var(--third)
+      opacity: 1
+
+

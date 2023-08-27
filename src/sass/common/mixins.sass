@@ -1,0 +1,59 @@
+@mixin center
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin space-center
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+@mixin height-justify
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+@mixin height-center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  height: 100%
+
+@mixin bg-center
+  background-position: center
+  +bg
+
+@mixin bg
+  background-size: cover
+  background-repeat: no-repeat
+
+@mixin small-text
+  font-size: 15px
+  font-weight: 600
+  line-height: 110%
+  letter-spacing: -0.45px
+
+@mixin text-2
+  font-size: 20px
+  font-weight: 400
+  line-height: 110%
+  letter-spacing: -0.6px
+
+@mixin text-3
+  font-size: 16px
+  line-height: 115%
+  letter-spacing: -0.32px
+  @media (max-width: 991px)
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: -0.28px
+
+@mixin text-btn
+  font-size: 16px
+  line-height: 115%
+  letter-spacing: -0.32px
+
+@mixin br-block()
+  overflow: hidden
+  border-radius: var(--br)
+  border: 1px solid var(--third)

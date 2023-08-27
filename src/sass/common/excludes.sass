@@ -1,0 +1,121 @@
++overflow-hidden
++modal
+
+body
+  background: var(--primary)
+  font-size: 26px
+  font-weight: 400
+  line-height: 110%
+  letter-spacing: -0.65px
+  font-family: $font-primary
+  color: var(--text)
+  @media (max-width: 991px)
+    font-size: 20px
+    letter-spacing: -0.5px
+
+.overflow-hidden
+  overflow: hidden
+
+.hidden
+  display: none!important
+
+html
+  scroll-behavior: smooth
+
+summary
+  list-style: none
+
+summary::-webkit-details-marker
+  display: none
+
+.section
+  position: relative
+  padding-top: 65px
+  padding-bottom: 65px
+  @media (max-width: 991px)
+    padding-top: 60px
+    padding-bottom: 60px
+
+.title
+  &-h1
+    font-family: $font_title
+    font-size: 115px
+    font-weight: 500
+    line-height: 95%
+    letter-spacing: -5.75px
+    text-transform: uppercase
+    @media (max-width: 991px)
+      font-size: 56px
+      letter-spacing: -2.8px
+  &-h2
+    font-size: 36px
+    font-weight: 400
+    line-height: 100%
+    letter-spacing: -1.08px
+
+.details
+  margin-bottom: 8px
+  &:last-child
+    margin-bottom: 0
+  &.active
+    & .summary__icon
+      transform: rotate(45deg)
+
+.summary
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 18px 24px
+  border-radius: 8px
+  border: 1px solid var(--third)
+  &__text
+    +text-2
+  &__icon
+    +center
+    width: 32px
+    height: 32px
+    background-color: var(--secondary)
+    border-radius: 50%
+    transition: var(--ts)
+    &::before
+      content: ''
+      width: 13.495px
+      height: 13.495px
+      display: block
+      +bg
+      background-image: url(../img/svg/details-open.svg)
+  &-inner
+    +text-3
+    border-radius: var(--br)
+    background: var(--third)
+    & div
+      padding: 24px
+    & p
+      &:last-child
+        margin-bottom: 0
+
+.item-mob
+  &.active
+    & .item-mob__content
+      visibility: visible
+  &__head
+    cursor: pointer
+  &__content
+    position: relative
+    overflow: hidden
+    visibility: hidden
+    max-height: 0
+    opacity: 0
+    transition: var(--ts)
+
+.title-row
+  display: flex
+  justify-content: space-between
+  @media (max-width: 767px)
+    flex-direction: column
+    gap: 24px
+  &__right
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-end

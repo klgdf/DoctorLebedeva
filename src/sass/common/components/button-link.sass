@@ -1,0 +1,80 @@
+.btn
+  display: block
+  box-sizing: border-box
+  +text-btn
+  transition: var(--ts)
+  cursor: pointer
+  &-primary
+    background: var(--text)
+    padding: 8px 24px 12px 24px
+    color: var(--primary)
+    width: max-content
+    border-radius: 6px
+  &-secondary
+    text-align: center
+    padding: 8px 24px 12px 24px
+    width: 100%
+    color: var(--text)
+    border-radius: 6px
+    background: var(--third)
+    &:hover
+      background: var(--secondary)
+      color: var(--primary)
+  &-header
+    display: flex
+    align-items: center
+    gap: 5px
+    padding: 5px 10px
+    color: var(--text)
+    border-radius: 8px
+    border: 1px solid var(--third)
+  &-more
+    +center
+    gap: 5px
+    color: var(--secondary)
+
+.tag
+  width: max-content
+  padding: 6px 10px
+  font-size: 16px
+  line-height: normal
+  font-weight: 600
+  letter-spacing: -0.48px
+  text-transform: uppercase
+  border-radius: 6px
+  border: 1px solid var(--third)
+
+.title-tag
+  width: max-content
+  padding: 6px 10px
+  font-size: 16px
+  font-weight: 600
+  letter-spacing: -0.48px
+  text-transform: uppercase
+  border-radius: 6px
+  background: var(--third)
+
+.slider-btn
+  display: flex
+  gap: 10px
+  &-prev
+    & svg
+      transform: rotate(180deg)
+  &-prev, &-next
+    position: unset!important
+    +center
+    width: 56px!important
+    height: 56px!important
+    border-radius: var(--br)
+    background: var(--secondary)
+    margin-top: 0!important
+    color: var(--third)!important
+    transition: var(--ts)
+    &:hover
+      background: var(--third)
+      color: var(--text)!important
+    & svg
+      width: 24px!important
+      height: 20px!important
+    &::after
+      content: none!important

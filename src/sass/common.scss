@@ -1,0 +1,43 @@
+/* BEGIN GENERAL */
+// @import "includes/base-functions-colors.scss";
+@import "project-vars.scss";
+/* END GENERAL */
+
+/* BEGIN FUNCTIONS */
+// @import "includes/base-functions.scss";
+/* END FUNCTIONS */
+
+/* BEGIN VENDORS */
+@import "vendors.scss";
+/* END VENDORS */
+
+/* BEGIN FONTS */
+@import "fonts.scss";
+/* END FONTS */
+
+/* BEGIN MIXINS */
+@import "common/mixins.sass";
+/* END MIXINS */
+
+/* BEGIN STYLES */
+@import "common/components/header.sass";
+@import "common/components/footer.sass";
+
+//components
+@import "common/components/button-link.sass";
+@import "common/components/modals.sass";
+@import "common/components/form.sass";
+
+//blocks
+@import "common/screens/screen-1.sass";
+@import "common/screens/screen-2.sass";
+@import "common/screens/screen-3.sass";
+@import "common/screens/screen-4.sass";
+@import "common/screens/screen-5.sass";
+@import "common/screens/screen-6.sass";
+@import "common/screens/screen-7.sass";
+@import "common/screens/screen-8.sass";
+@import "common/screens/screen-9.sass";
+@import "common/screens/screen-10.sass";
+@import "common/excludes.sass";
+/* END STYLES */

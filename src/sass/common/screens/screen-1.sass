@@ -1,0 +1,54 @@
+.screen-1
+  &__row
+    &-1
+      display: flex
+      gap: 15px
+      color: var(--primary)
+      margin-bottom: 24px
+      @media (max-width: 991px)
+        flex-direction: column
+    &-2
+      display: grid
+      grid-template-columns: repeat(5, 1fr)
+      gap: 16px
+      @media (max-width: 991px)
+        grid-template-columns: repeat(1, 1fr)
+  &__left
+    overflow: hidden
+    border-radius: 0px var(--br) var(--br) 0px
+    @media (max-width: 991px)
+      order: 2
+  &__right
+    padding: 30px
+    border-radius: var(--br)
+    background: var(--secondary)
+    @media (max-width: 991px)
+      order: 1
+  &__subtitle
+    margin-bottom: 24px
+  &__item
+    padding: 30px
+    border-radius: var(--br)
+    border: 1px solid var(--third)
+    @media (max-width: 991px)
+      padding: 20px
+      display: flex
+      align-items: flex-end
+      justify-content: space-between
+  &__number
+    color: var(--secondary)
+    margin-bottom: 25px
+    @media (max-width: 991px)
+      margin-bottom: 0
+    & span
+      font-family: $font_title
+      font-size: 106px
+      font-weight: 500
+      line-height: 85%
+      letter-spacing: -1.06px
+      text-transform: lowercase
+  &__text
+    color: var(--text)
+    font-family: SF Pro Display
+    font-size: 20px
+    letter-spacing: -0.6px

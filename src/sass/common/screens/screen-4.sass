@@ -1,0 +1,32 @@
+.screen-4
+  &__block
+    position: relative
+    overflow: hidden
+    padding: 30px
+    color: var(--primary)
+    background-color: var(--secondary)
+    border-radius: var(--br)
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: url(../img/screen-bg.webp),
+      background-size: cover
+      background-repeat: no-repeat
+      opacity: 0.6
+      mix-blend-mode: multiply
+  &__text
+    +text-3
+    max-width: 539px
+  &__item
+    display: flex
+    justify-content: space-between
+    padding: 24px 30px
+    border-bottom: 1px solid rgba(37, 35, 32, 0.2)
+    @media (max-width: 767px)
+      flex-direction: column
+    &:last-child
+      border-bottom: 0

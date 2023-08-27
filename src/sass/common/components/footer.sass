@@ -1,0 +1,115 @@
+.footer
+  color: var(--text-footer)
+  margin-bottom: 30px
+  @media (max-width: 540px)
+    margin-bottom: 10px
+  &__block
+    display: grid
+    grid-template-columns: repeat(4, auto)
+    padding: 30px
+    border-radius: var(--br)
+    background: var(--secondary)
+    @media (max-width: 1021px)
+      padding: 20px
+      grid-template-columns: repeat(3, 1fr)
+      gap: 20px
+    @media (max-width: 767px)
+      grid-template-columns: repeat(2, 1fr)
+    @media (max-width: 540px)
+      grid-template-columns: repeat(1, 1fr)
+      gap: 0
+  &-menu
+    & ul
+      margin-bottom: 0
+    & li
+      color: var(--primary)
+      +text-btn
+      margin-bottom: 24px
+      @media (max-width: 767px)
+        margin-bottom: 16px
+      &:last-child
+        margin-bottom: 0
+  &__link, &__info
+    color: var(--primary)
+  &__link
+    @media (max-width: 1170px)
+      font-size: 20px
+      letter-spacing: -0.5px
+  &__info
+    +text-3
+    display: inline-block
+    margin-bottom: 26px
+    @media (max-width: 991px)
+      margin-bottom: 16px
+  &__text
+    color: var(--text-footer)
+    +text-3
+    max-width: 293px
+    &--mob
+      display: none
+      @media (max-width: 991px)
+        display: block
+        margin-bottom: 32px
+    & div
+      margin-bottom: 27px
+      & p
+        margin-bottom: 4px
+        &:last-child
+          margin-bottom: 0
+      &:last-child
+        margin-bottom: 0
+  &__item
+    &-5, &-6, &-7, &-8
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      @media (max-width: 991px)
+        justify-content: center
+    &-1
+      @media (max-width: 767px)
+        order: 1
+    &-2
+      @media (max-width: 767px)
+        order: 2
+      @media (max-width: 540px)
+        margin: 40px 0
+    &-3
+      @media (max-width: 767px)
+        order: 6
+    &-4
+      @media (max-width: 767px)
+        order: 3
+    &-5
+      @media (max-width: 767px)
+        order: 5
+    &-6, &-7
+      @media (max-width: 991px)
+        display: none
+    &-8
+      @media (max-width: 767px)
+        order: 4
+      @media (max-width: 540px)
+        margin: 40px 0 22px
+  &__contact
+    margin-bottom: 32px
+    & span
+      color: var(--text-footer)
+      +text-3
+      display: block
+      margin-bottom: 16px
+    &:last-child
+      margin-bottom: 0
+  &__logo
+    @media (max-width: 540px)
+      margin-bottom: 38px
+  &__row
+    display: flex
+    align-items: center
+  &__social
+    &--mob
+      display: none
+      @media (max-width: 991px)
+        display: block
+
+.privacy-policy
+  max-width: 181px
