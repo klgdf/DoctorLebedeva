@@ -1,21 +1,23 @@
 header.header
   .container
     .header__row
-      a(href="").header__logo 
-        img(src="./assets/img/svg/logo.svg", alt="logo")
-      .header__menu
-        div
-          ul
-            li.menu-item
-              a(href="") Ринопластика
-            li.menu-item
-              a(href="") Блефаропластика
-            li.menu-item
-              a(href="") Омоложение лица
-      .header__right
-        a(href="").btn.btn-header Записаться на консультацию <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-          <path d="M2 8H8V2" stroke="#F1ECE3" stroke-width="1.5" stroke-linecap="square"/>
-          <path d="M7 7L2 2" stroke="#F1ECE3" stroke-width="1.5" stroke-linecap="square"/>
-          </svg>
-        a(href="").header__social
-          img(src="./assets/img/svg/vk.svg", alt="")
+      .header__left
+        a(href="").header__logo
+          <svg><use xlink:href="./assets/img/svg/sprite.svg#logo"></use></svg>
+      .header__right#nav
+        .header__menu
+          div
+            ul
+              li.menu-item
+                a(href="") Ринопластика
+              li.menu-item
+                a(href="") Блефаропластика
+              li.menu-item
+                a(href="") Омоложение лица
+        .header__contacts
+          a(href="#cons").btn.btn-header Записаться на консультацию <svg class="arrow-btn"><use xlink:href="./assets/img/svg/sprite.svg#btn-header"></use></svg>
+          a(href="").header__social
+            <svg><use xlink:href="./assets/img/svg/sprite.svg#vk"></use></svg>
+      .header__burger.e_menu
+        <svg class="burger-open"><use xlink:href="./assets/img/svg/sprite.svg#burger-open"></use></svg>
+        <svg class="burger-close"><use xlink:href="./assets/img/svg/sprite.svg#burger-close"></use></svg>

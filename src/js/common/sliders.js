@@ -1,46 +1,80 @@
 export function initSliders() {
-  const myWay = new Swiper('.screen-5__slider', {
+  const myWay = new Swiper('.screen-6__slider', {
     breakpoints: {
       320: {
-        slidesPerView: 1.1,
+        slidesPerView: 'auto',
         spaceBetween: 16
       },
-      540: {
-        slidesPerView: 2,
-        spaceBetween: 40
-      },
-      991: {
-        slidesPerView: 3.773,
-        spaceBetween: 40
-      },
+      1199: {
+        slidesPerView: 4,
+        spaceBetween: 16
+      }
     },
     navigation: {
-      nextEl: '.screen-5 .swiper-button-next',
-      prevEl: '.screen-5 .swiper-button-prev',
+      nextEl: '.screen-6 .swiper-button-next',
+      prevEl: '.screen-6 .swiper-button-prev',
     },
   });
 
-  const publications = new Swiper('.screen-10__slider', {
+  const publications = new Swiper('.screen-8__slider', {
     breakpoints: {
       320: {
-        slidesPerView: 1,
+        slidesPerView: 'auto',
         spaceBetween: 16
       },
-      540: {
-        slidesPerView: 2,
+      1199: {
+        slidesPerView: 4,
         spaceBetween: 16
-      },
-      991: {
-        slidesPerView: 3.773,
-        spaceBetween: 16
-      },
+      }
     },
     navigation: {
-      nextEl: '.screen-10 .swiper-button-next',
-      prevEl: '.screen-10 .swiper-button-prev',
+      nextEl: '.screen-8 .swiper-button-next',
+      prevEl: '.screen-8 .swiper-button-prev',
+    },
+  });
+
+  const reviews = new Swiper('.reviews-slider .swiper', {
+    breakpoints: {
+      320: {
+        slidesPerView: 'auto',
+        spaceBetween: 16
+      },
+      1199: {
+        slidesPerView: 4,
+        spaceBetween: 16
+      }
+    },
+    navigation: {
+      nextEl: '.reviews-slider .swiper-button-next',
+      prevEl: '.reviews-slider .swiper-button-prev',
     },
   });
 
 
+  const beforeAfter = new Swiper('.before-after-slider .swiper', {
+    breakpoints: {
+      320: {
+        slidesPerView: 'auto',
+        spaceBetween: 16
+      },
+      1199: {
+        slidesPerView: 4,
+        spaceBetween: 16
+      }
+    },
+    navigation: {
+      nextEl: '.before-after-slider .swiper-button-next',
+      prevEl: '.before-after-slider .swiper-button-prev',
+    },
+  });
+
+  const sertificates = new Swiper('.sert .swiper', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: '.sert .swiper-button-next',
+      prevEl: '.sert .swiper-button-prev',
+    },
+  });
 
 }

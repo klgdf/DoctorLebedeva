@@ -1,0 +1,27 @@
+.container
+  .form
+    .form__block
+      h2.title-h1.title-center записаться на консультацию
+      .form__row
+        p
+          span.wpcf7-form-control-wrap
+            input(type="text" placeholder="Имя")
+          <br>
+          span.wpcf7-form-control-wrap
+            input(type="tel" placeholder="Номер телефона")
+      .form__row
+        .form__text Выберите вариант консультации: 
+        span.wpcf7-form-control-wrap(data-name='your-sports')
+          span.wpcf7-form-control.wpcf7-radio
+            span.wpcf7-list-item.first
+              input(type='radio' name='appointment' value='')
+              span.wpcf7-list-item-label Бесплатно онлайн
+            span.wpcf7-list-item
+              input(type='radio' name='appointment' value='' checked='checked')
+              span.wpcf7-list-item-label Клиника в Санкт-Петербурге
+            span.wpcf7-list-item.last
+              input(type='radio' name='appointment' value='')
+              span.wpcf7-list-item-label Клиника в Новосибирске
+      input(type="submit" value="Записаться").btn.btn-primary
+
+

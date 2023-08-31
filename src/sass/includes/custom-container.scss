@@ -34,6 +34,8 @@
 
 @include container-padding(1490px, 0, 1460px);
 @include container-padding(1200px, 0, 1190px);
-@include container-padding(320px, 1199px);
+@include container-padding(992px, 1199px, 991px);
+@include container-padding(768px, 991px, 768px);
+@include container-padding(320px, 767px);
 
 /* END CONTAINER SETTINGS */

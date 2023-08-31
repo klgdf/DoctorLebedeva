@@ -1,0 +1,30 @@
+.about
+  & .title-tag
+    margin: 0 auto 24px
+  & .title-h1
+    @media (max-width: 991px)
+      display: none
+  & .btn
+    width: 423px
+    @media (max-width: 540px)
+      width: 100%
+  &__right
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    +text-2
+    & ul
+      margin-bottom: 32px
+    & li
+      padding: 8px 0 16px
+      border-top: 1px solid var(--third)
+      @media (max-width: 991px)
+        padding: 8px 23px 12px 0
+
+.img-o
+  overflow: hidden
+  border-radius: var(--br)
+  @media (max-width: 767px)
+    max-width: 376px
+  & img
+    +o-fit

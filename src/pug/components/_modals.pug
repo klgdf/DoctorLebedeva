@@ -1,11 +1,36 @@
-.overlay.hidden.cons#cons
+.overlay.hidden.menu#menu
+  .overflow
+    .menu__box.overflow__box
+      .menu__menu
+        div
+          ul
+            li.menu-item
+              a(href="") Ринопластика
+            li.menu-item
+              a(href="") Блефаропластика
+            li.menu-item
+              a(href="") Омоложение лица
+      .menu__contacts
+        a(href="").menu__social
+          <svg><use xlink:href="./assets/img/svg/sprite.svg#vk"></use></svg>
+        a(href="#cons").btn.btn-third Записаться на консультацию
+    .overflow__close.e_menu_close
+
+.overlay.hidden.sert#sert
   .overflow
     .overflow__box
-      .cons__block
-        .cons__row
-          .cons__logo
-          .overflow__box_close.e_cons_close
-        .cons__text Мы перезвоним вам в ближайшее время
-    .overflow__close.e_cons_close
-
+      .container
+        .sert__slider.swiper
+          .slider-btn-prev.swiper-button-prev
+            <svg><use xlink:href="./assets/img/svg/sprite.svg#arrow-slider"></use></svg>
+          .swiper-wrapper
+            .sert__slide.swiper-slide
+              img(src="../assets/img/sert-1.png", alt="")
+            .sert__slide.swiper-slide
+              img(src="../assets/img/sert-1.png", alt="")
+            .sert__slide.swiper-slide
+              img(src="../assets/img/sert-1.png", alt="")
+          .slider-btn-next.swiper-button-next
+            <svg><use xlink:href="./assets/img/svg/sprite.svg#arrow-slider"></use></svg>
+    .overflow__close.e_sert_close
 

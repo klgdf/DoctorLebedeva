@@ -1,32 +1,35 @@
 .screen-4
   &__block
-    position: relative
-    overflow: hidden
     padding: 30px
     color: var(--primary)
-    background-color: var(--secondary)
-    border-radius: var(--br)
+    @media (max-width: 767px)
+      padding: 20px
     &::before
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-      bottom: 0
-      background: url(../img/screen-bg.webp),
-      background-size: cover
-      background-repeat: no-repeat
-      opacity: 0.6
-      mix-blend-mode: multiply
+      transform: scale(-1, 1)
   &__text
     +text-3
-    max-width: 539px
+    max-width: 540px
+    & p
+      &:last-child
+        margin-bottom: 0
   &__item
+    position: relative
+    z-index: 1
     display: flex
     justify-content: space-between
-    padding: 24px 30px
+    gap: 80px
+    padding: 24px 0
     border-bottom: 1px solid rgba(37, 35, 32, 0.2)
-    @media (max-width: 767px)
+    @media (max-width: 991px)
       flex-direction: column
+      gap: 16px
+    @media (max-width: 767px)
+      padding: 8px 0 24px
+    &:first-child
+      padding-top: 0
+      @media (max-width: 767px)
+        padding-top: 8px
+        border-top: 1px solid rgba(37, 35, 32, 0.2)
     &:last-child
+      padding-bottom: 0
       border-bottom: 0

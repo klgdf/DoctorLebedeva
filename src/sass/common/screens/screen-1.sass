@@ -5,32 +5,56 @@
       gap: 15px
       color: var(--primary)
       margin-bottom: 24px
-      @media (max-width: 991px)
+      @media (max-width: 767px)
         flex-direction: column
     &-2
       display: grid
       grid-template-columns: repeat(5, 1fr)
       gap: 16px
-      @media (max-width: 991px)
-        grid-template-columns: repeat(1, 1fr)
+      @media (max-width: 1199px)
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
   &__left
     overflow: hidden
-    border-radius: 0px var(--br) var(--br) 0px
-    @media (max-width: 991px)
-      order: 2
-  &__right
-    padding: 30px
     border-radius: var(--br)
-    background: var(--secondary)
+    flex: 0 0 376px
     @media (max-width: 991px)
+      flex: 1 1 auto
+    @media (max-width: 767px)
+      max-width: 376px
+      margin: 0 0 0 auto
+      order: 2
+    & img
+      +o-fit
+  &__right
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 30px
+    @media (max-width: 767px)
+      padding: 20px
       order: 1
+  &__block, &__title
+    position: relative
+    z-index: 2
+  &__title
+    margin-bottom: 148px
+    @media (max-width: 991px)
+      margin-bottom: 24px
   &__subtitle
+    max-width: 468px
     margin-bottom: 24px
+    @media (max-width: 991px)
+      margin-bottom: 55px
   &__item
     padding: 30px
     border-radius: var(--br)
     border: 1px solid var(--third)
-    @media (max-width: 991px)
+    @media (max-width: 1280px)
+      width: 220px
+    @media (max-width: 540px)
+      width: 100%
       padding: 20px
       display: flex
       align-items: flex-end
@@ -38,7 +62,7 @@
   &__number
     color: var(--secondary)
     margin-bottom: 25px
-    @media (max-width: 991px)
+    @media (max-width: 540px)
       margin-bottom: 0
     & span
       font-family: $font_title
@@ -49,6 +73,6 @@
       text-transform: lowercase
   &__text
     color: var(--text)
-    font-family: SF Pro Display
-    font-size: 20px
-    letter-spacing: -0.6px
+    +text-2
+  &__info
+    +text-2

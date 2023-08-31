@@ -19,80 +19,29 @@ export const init = () => {
     let target = e.target,
       element = false;
 
-    if (document.querySelector(".header__nav")) {
-      element = ClickSelector(target, "e_menu");
+    if (document.querySelector('#menu')) {
+      element = ClickSelector(target, 'e_menu');
       if (element) {
-        element.classList.toggle("active")
-        modal.toggle("mob_menu")
-      } else {
-        element = ClickSelector(target, "header");
-        if (!element) {
-          document.querySelector(".e_menu").classList.remove("active")
-          modal.close("mob_menu")
-        }
+        modal.toggle('menu');
+        element.classList.toggle('active');
       }
-    }
-
-
-    if (document.querySelector(".cons")) {
-      element = ClickSelector(target, "e_cons");
+      element = ClickSelector(target, 'e_menu_close');
       if (element) {
-        modal.open("cons")
-      } else {
-        element = ClickSelector(target, "e_cons_close");
-        if (element) {
-          modal.close("cons")
-        }
+        modal.close('menu');
+        document.querySelector('.header__burger').classList.remove('active');
       }
     }
 
-    if (document.querySelector(".isyourregion")) {
-      element = ClickSelector(target, "e_isyourregion");
+    if (document.querySelector('#sert')) {
+      element = ClickSelector(target, 'e_sert');
       if (element) {
-        modal.open("isyourregion")
-      } else {
-        element = ClickSelector(target, "e_isyourregion_close");
-        if (element) {
-          modal.close("isyourregion")
-        }
+        modal.open('sert');
       }
-    }
-
-    if (document.querySelector(".yourregion")) {
-      element = ClickSelector(target, "e_yourregion");
+      element = ClickSelector(target, 'e_sert_close');
       if (element) {
-        modal.close("isyourregion")
-        modal.open("yourregion")
-      } else {
-        element = ClickSelector(target, "e_yourregion_close");
-        if (element) {
-          modal.close("yourregion")
-        }
+        modal.close('sert');
       }
     }
-
-    if (document.querySelector(".header__search")) {
-      element = ClickSelector(target, "e_search");
-      if (element || target.closest('.header__search')) {
-        document.querySelector('input[type="search"]').focus();
-
-        element.classList.add('active');
-        document.querySelector('.header__mob').classList.add('active');
-        document.querySelector('.header__logo--mobile').classList.add('hidden');
-        document.querySelector('.header__phone--mob').classList.add('hidden');
-        document.querySelector('.header__burger--mobile').classList.add('hidden');
-      } else {
-        document.querySelector(".header__search").classList.remove('active');
-        document.querySelector(".header__search--mob").classList.remove('active');
-        document.querySelector('.header__mob').classList.remove('active');
-        document.querySelector('.header__logo--mobile').classList.remove('hidden');
-        document.querySelector('.header__phone--mob').classList.remove('hidden');
-        document.querySelector('.header__burger--mobile').classList.remove('hidden');
-      }
-    }
-
-
-
 
   });
 };

@@ -1,0 +1,57 @@
+.menu
+  &__box
+    display: none
+    width: 300px
+    padding: 20px
+    border-radius: var(--br)
+    background: var(--text)
+    @media (max-width: 991px)
+      display: block
+      margin: 77px calc((100% - 768px) / 2 + 15px) auto auto!important
+    @media (max-width: 767px)
+      margin: 77px 10px auto auto!important
+  &__menu
+    color: var(--primary)
+    margin-bottom: 136px
+    & ul
+      margin-bottom: 0
+    & li
+      +small-text
+      margin-bottom: 24px
+  &__social
+    +center
+    width: 40px
+    height: 40px
+    border: 1px solid var(--third)
+    border-radius: 8px
+    transition: var(--ts)
+    margin-bottom: 16px
+    &:hover
+      background: var(--secondary)
+      border: 1px solid var(--secondary)
+    & svg
+      color: var(--primary)
+      width: 26px
+      height: 16px
+
+.sert
+  &__slider
+    width: 1010px
+  & .swiper-wrapper
+    width: 866px!important
+    background: var(--text)
+    border-radius: var(--br)
+  &__slide
+    +center
+    padding: 40px
+    & img
+      margin: 0 auto
+      width: auto
+      height: 100%
+  & .slider-btn-prev, & .slider-btn-next
+    position: absolute!important
+    top: calc(50% - 28px)!important
+  & .slider-btn-prev
+    right: 10px!important
+  & .slider-btn-prev
+    left: 10px!important

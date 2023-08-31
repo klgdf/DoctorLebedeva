@@ -4,37 +4,53 @@
   +text-btn
   transition: var(--ts)
   cursor: pointer
-  &-primary
-    background: var(--text)
-    padding: 8px 24px 12px 24px
-    color: var(--primary)
-    width: max-content
-    border-radius: 6px
-  &-secondary
+  &-primary, &-secondary, &-third
     text-align: center
     padding: 8px 24px 12px 24px
+    border-radius: 6px
+  &-primary
+    background: var(--text)
+    color: var(--primary)
+    width: max-content
+    &:hover
+      background: var(--third)
+      color: var(--text)
+  &-secondary
     width: 100%
     color: var(--text)
-    border-radius: 6px
     background: var(--third)
     &:hover
       background: var(--secondary)
       color: var(--primary)
+  &-third
+    background: var(--secondary)
+    color: var(--primary)
+    width: max-content
+    &:hover
+      background: var(--third)
+      color: var(--text)
   &-header
+    +small-text
     display: flex
     align-items: center
+    height: max-content
     gap: 5px
     padding: 5px 10px
     color: var(--text)
     border-radius: 8px
     border: 1px solid var(--third)
+    &:hover
+      background: var(--secondary)
+      border-color: var(--secondary)
   &-more
+    +small-text
     +center
     gap: 5px
     color: var(--secondary)
 
 .tag
   width: max-content
+  height: max-content
   padding: 6px 10px
   font-size: 16px
   line-height: normal
@@ -57,6 +73,8 @@
 .slider-btn
   display: flex
   gap: 10px
+  @media (max-width: 767px)
+    gap: 8px
   &-prev
     & svg
       transform: rotate(180deg)
@@ -70,11 +88,18 @@
     margin-top: 0!important
     color: var(--third)!important
     transition: var(--ts)
+    @media (max-width: 767px)
+      width: 40px!important
+      height: 40px!important
+      border-radius: 10px
     &:hover
       background: var(--third)
       color: var(--text)!important
     & svg
       width: 24px!important
       height: 20px!important
+      @media (max-width: 767px)
+        width: 19px!important
+        height: 16px!important
     &::after
       content: none!important

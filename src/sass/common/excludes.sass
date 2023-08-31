@@ -35,6 +35,10 @@ summary::-webkit-details-marker
   @media (max-width: 991px)
     padding-top: 60px
     padding-bottom: 60px
+  &-first
+    padding-top: 10px
+    @media (max-width: 991px)
+      padding-top: 12px
 
 .title
   &-h1
@@ -44,6 +48,9 @@ summary::-webkit-details-marker
     line-height: 95%
     letter-spacing: -5.75px
     text-transform: uppercase
+    word-wrap: break-word
+    -webkit-hyphens: auto
+    hyphens: auto
     @media (max-width: 991px)
       font-size: 56px
       letter-spacing: -2.8px
@@ -52,6 +59,25 @@ summary::-webkit-details-marker
     font-weight: 400
     line-height: 100%
     letter-spacing: -1.08px
+    @media (max-width: 767px)
+      font-size: 28px
+      letter-spacing: -0.84px
+  &-h3
+    font-family: $font_title
+    font-size: 72px
+    font-weight: 500
+    line-height: 95%
+    letter-spacing: -3.6px
+    text-transform: uppercase
+    @media (max-width: 767px)
+      font-size: 34px
+      line-height: 100%
+      letter-spacing: -1.36px
+  &-center
+    text-align: center
+    margin-bottom: 45px
+    @media (max-width: 767px)
+      margin-bottom: 24px
 
 .details
   margin-bottom: 8px
@@ -70,20 +96,22 @@ summary::-webkit-details-marker
   border: 1px solid var(--third)
   &__text
     +text-2
+    max-width: 565px
+    @media (max-width: 767px)
+      max-width: 174px
   &__icon
     +center
     width: 32px
+    min-width: 32px
     height: 32px
-    background-color: var(--secondary)
+    background: var(--secondary)
     border-radius: 50%
     transition: var(--ts)
-    &::before
-      content: ''
+    &:hover
+      background: var(--text)
+    & svg
       width: 13.495px
       height: 13.495px
-      display: block
-      +bg
-      background-image: url(../img/svg/details-open.svg)
   &-inner
     +text-3
     border-radius: var(--br)
@@ -111,11 +139,76 @@ summary::-webkit-details-marker
 .title-row
   display: flex
   justify-content: space-between
+  margin-bottom: 45px
   @media (max-width: 767px)
     flex-direction: column
     gap: 24px
+    margin-bottom: 24px
   &__right
     display: flex
     flex-direction: column
     justify-content: space-between
     align-items: flex-end
+    gap: 24px
+    @media (max-width: 767px)
+      flex-direction: row
+      align-items: center
+
+.arrow-btn
+  width: 6px
+  height: 6px
+
+.screen-3, .screen-5
+  &__row
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 18px
+    @media (max-width: 767px)
+      display: flex
+      flex-direction: column
+
+.screen-8, .screen-6, .screen-7
+  & .swiper-slide
+    @media (max-width: 1199px)
+      width: 300px!important
+
+.screen-1__right, .screen-4__block, .form
+  position: relative
+  overflow: hidden
+  border-radius: var(--br)
+  &::before
+    content: ''
+    +posa
+    background-image: url(../img/screen-1-bg.webp)
+    +bg
+    mix-blend-mode: multiply
+    z-index: 0
+
+.screen-1__right, .screen-4__block
+  background: var(--secondary)
+
+.screen-3__right, .screen-5__left
+  overflow: hidden
+  border-radius: var(--br)
+  @media (max-width: 991px)
+    max-width: 570px
+  & img
+    +o-fit
+
+.screen-3__left, .screen-5__right
+  @media (max-width: 991px)
+    max-width: 500px
+    min-width: 380px
+  @media (max-width: 767px)
+    max-width: 100%
+
+.row
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 15px
+  @media (max-width: 767px)
+    grid-template-columns: repeat(1, 1fr)
+    gap: 12px
+
+ul
+  margin-bottom: 0

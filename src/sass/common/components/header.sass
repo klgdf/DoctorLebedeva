@@ -1,15 +1,95 @@
 .header
-  padding: 19px 0 15px
+  position: relative
+  margin-top: 6px
+  transition: var(--ts)
+  @media (max-width: 991px)
+    margin-top: 10px
+  &.active
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 115
+    & .header__right
+      top: 76px
+    & .header__social
+      & svg
+        color: var(--primary)
+    & .header__menu
+      & li
+        color: var(--primary)
+        @media (max-width: 991px)
+          color: var(--primary)
+    & .header__logo, & .btn-header
+      color: var(--primary)
+    & .header__row
+      border-radius: 8px
+      background: var(--text)
+  &__logo
+    position: relative
+    +h-center
+    height: 100%
+    z-index: 110
+    & svg
+      width: 139px
+      height: 22px
   &__row
     display: flex
     justify-content: space-between
+    padding: 13px 7px 15px 9px
+    margin: 0 -7px 0 -9px
+    @media (max-width: 991px)
+      padding: 10px 0px
+      margin: 0
   &__right
-    display: flex
-    gap: 8px
+    +h-center
+    gap: 120px
+    @media (max-width: 991px)
+      display: none
+  &__burger
+    display: none
+    @media (max-width: 991px)
+      position: relative
+      display: block
+      cursor: pointer
+      z-index: 110
+    & .burger-close
+      display: none
+    & .burger-open
+      display: block
+    &.active
+      & .burger-close
+        display: block
+      & .burger-open
+        display: none
+    & svg
+      width: 40px
+      height: 40px
   &__menu
     & ul
-      display: flex
-      align-items: center
+      +h-center
       gap: 28px
+      margin-bottom: 0
+    & li
+      transition: var(--ts)
+      &:hover
+        color: var(--secondary)!important
       & a
+        display: block
         +small-text
+  &__contacts
+    +h-center
+    gap: 8px
+  &__social
+    +center
+    width: 28px
+    height: 28px
+    border: 1px solid var(--third)
+    border-radius: 8px
+    transition: var(--ts)
+    &:hover
+      background: var(--secondary)
+      border: 1px solid var(--secondary)
+    & svg
+      width: 20px
+      height: 9px

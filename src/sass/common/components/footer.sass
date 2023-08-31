@@ -40,11 +40,17 @@
     display: inline-block
     margin-bottom: 26px
     @media (max-width: 991px)
+      font-size: 15px
+      font-weight: 600
+      line-height: 110%
+      letter-spacing: -0.45px
       margin-bottom: 16px
   &__text
     color: var(--text-footer)
     +text-3
     max-width: 293px
+    @media (max-width: 540px)
+      max-width: 100%
     &--mob
       display: none
       @media (max-width: 991px)
@@ -82,6 +88,8 @@
     &-5
       @media (max-width: 767px)
         order: 5
+      @media (max-width: 540px)
+        margin-bottom: 32px
     &-6, &-7
       @media (max-width: 991px)
         display: none
@@ -101,15 +109,36 @@
       margin-bottom: 0
   &__logo
     @media (max-width: 540px)
+      display: block
+      margin: 0 auto
+      width: max-content
       margin-bottom: 38px
+    & svg
+      width: 201px
+      height: 60px
   &__row
     display: flex
     align-items: center
+    justify-content: space-between
   &__social
+    +center
+    width: 45px
+    min-width: 45px
+    height: 45px
+    border: 1px solid var(--primary)
+    border-radius: 12px
+    transition: var(--ts)
+    &:hover
+      background: var(--text)
+      border: 1px solid var(--text)
+    & svg
+      width: 26px
+      height: 16px
+      color: var(--primary)
     &--mob
       display: none
       @media (max-width: 991px)
-        display: block
+        display: flex
 
 .privacy-policy
-  max-width: 181px
+  max-width: 181px!important

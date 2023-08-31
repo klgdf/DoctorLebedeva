@@ -1,0 +1,61 @@
+.form
+  padding: 30px 70px 50px
+  border-radius: var(--br)
+  background: var(--third)
+  & .title-h1
+    @media (max-width: 1170px)
+      font-size: 34px
+      line-height: 100%
+      letter-spacing: -1.36px
+  &__block
+    position: relative
+    z-index: 1
+    max-width: 615px
+    margin: 0 auto
+    & p
+      margin-bottom: 0
+    & input
+      +small-text
+      width: 100%
+    & input:not(.btn)
+      padding: 10px 16px
+      border-radius: 4px
+      background: var(--text)
+    & input[type="radio"]
+      display: none
+  &__row
+    margin-bottom: 24px
+    & .wpcf7-radio
+      display: flex
+      gap: 24px
+    & .wpcf7-list-item
+      display: flex
+      align-items: center
+      gap: 8px
+    & .wpcf7-list-item-label
+      +small-text
+
+.wpcf7-form-control-wrap .wpcf7-form-control.wpcf7-radio
+  display: flex
+  & .wpcf7-list-item
+    display: flex
+    align-items: center
+    margin: 0
+  & input[type="radio"]
+    display: none
+  & input[type="radio"] + .wpcf7-list-item-label
+    position: relative
+    padding-left: 30px
+    cursor: pointer
+  & input[type="radio"] + .wpcf7-list-item-label:before
+    content: ""
+    position: absolute
+    left: 0
+    top: 0
+    width: 20px
+    height: 20px
+    border: 2px solid #f0c419
+    background-color: transparent
+    border-radius: 4px
+  & input[type="radio"]:checked + .wpcf7-list-item-label:before
+    background-color: #f0c419

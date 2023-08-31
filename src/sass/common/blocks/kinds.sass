@@ -1,0 +1,26 @@
+.block-1
+  margin-bottom: 80px
+  @media (max-width: 767px)
+    margin-bottom: 120px
+  &__title
+    margin-bottom: 40px
+    @media (max-width: 767px)
+      margin-bottom: 24px
+  &__left
+    @media (max-width: 767px)
+      margin-bottom: 24px
+    & img
+      width: 100%
+      overflow: hidden
+      border-radius: var(--br)
+  &__text
+    +text-3
+    & p
+      &:last-child
+        margin-bottom: 0
+  &__title
+    +text-2
+    color: var(--secondary)
+    margin-bottom: 24px
+    @media (max-width: 767px)
+      margin-bottom: 16px

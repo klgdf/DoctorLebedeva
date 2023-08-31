@@ -1,0 +1,43 @@
+.about-operation
+  display: flex
+  &.rino
+    gap: 36px
+    @media (max-width: 991px)
+      flex-direction: column
+      gap: 56px
+    & .about-operation
+      &__row
+        flex-direction: column
+        max-width: 550px
+      &__left
+        margin-bottom: 24px
+      &__grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+        gap: 16px
+  &.blefaro, &.face
+    flex-direction: column
+    & .about-operation
+      &__grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 19px
+  &__row
+    display: flex
+  &__left
+    color: var(--secondary)
+  &__right
+    +text-3
+  &__item
+    padding: 30px
+    border: 1px solid var(--third)
+    border-radius: var(--br)
+  &__title
+    +text-3
+    color: var(--secondary)
+    text-transform: uppercase
+    margin-bottom: 25px
+  &__grid
+    display: grid
+    @media (max-width: 540px)
+      grid-template-columns: repeat(1, 1fr)!important
+      gap: 12px

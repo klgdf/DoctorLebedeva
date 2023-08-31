@@ -1,0 +1,26 @@
+.tile
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: repeat(2, 1fr)
+  gap: 16px
+  @media (max-width: 767px)
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(3, 1fr)
+  @media (max-width: 540px)
+    grid-template-columns: repeat(1, 1fr)
+    grid-template-rows: repeat(6, 1fr)
+  &__item
+    padding: 20px
+    border-radius: var(--br)
+    border: 1px solid var(--third)
+  &__number
+    color: var(--third)
+    +text-3
+    margin-bottom: 28px
+    @media (max-width: 767px)
+      margin-bottom: 24px
+  &__text
+    +text-2
+    max-width: 280px
+    @media (max-width: 540px)
+      max-width: 100%

@@ -26,9 +26,14 @@
 //components
 @import "common/components/button-link.sass";
 @import "common/components/modals.sass";
-@import "common/components/form.sass";
 
 //blocks
+@import "common/blocks/form.sass";
+@import "common/blocks/cliniks.sass";
+@import "common/blocks/about.sass";
+@import "common/blocks/about-operation.sass";
+@import "common/blocks/tile.sass";
+@import "common/blocks/kinds.sass";
 @import "common/screens/screen-1.sass";
 @import "common/screens/screen-2.sass";
 @import "common/screens/screen-3.sass";
@@ -37,7 +42,5 @@
 @import "common/screens/screen-6.sass";
 @import "common/screens/screen-7.sass";
 @import "common/screens/screen-8.sass";
-@import "common/screens/screen-9.sass";
-@import "common/screens/screen-10.sass";
 @import "common/excludes.sass";
 /* END STYLES */

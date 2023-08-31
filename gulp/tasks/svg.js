@@ -12,33 +12,33 @@ export const svg = () => {
           })
         )
       )
-      // .pipe(
-      //   svgSprite({
-      //     mode: {
-      //       // stack: {
-      //       //   sprite: `../sprite.svg`,
-      //       //   // Создавать страницу с перечнем иконок
-      //       //   example: true,
-      //       // },
-      //       // view: {
-      //       //   // Activate the «view» mode
-      //       //   bust: false,
-      //       //   render: {
-      //       //     scss: true, // Activate Sass output (with default options)
-      //       //   },
-      //       // },
-      //       symbol: {
-      //         sprite: `../sprite.svg`,
-      //         // Создавать страницу с перечнем иконок
-      //         example: true,
-      //       }, // Activate the «symbol» mode
-      //     },
-      //   })
-      // )
+      .pipe(
+        svgSprite({
+          mode: {
+            // stack: {
+            //   sprite: `../sprite.svg`,
+            //   // Создавать страницу с перечнем иконок
+            //   example: true,
+            // },
+            // view: {
+            //   // Activate the «view» mode
+            //   bust: false,
+            //   render: {
+            //     scss: true, // Activate Sass output (with default options)
+            //   },
+            // },
+            symbol: {
+              sprite: `../sprite.svg`,
+              // Создавать страницу с перечнем иконок
+              example: true,
+            }, // Activate the «symbol» mode
+          },
+        })
+      )
       // Отправить symbol-sprite в src, чтобы подключить в body для сокращения ресурсов
       // .pipe(app.gulp.dest(`${app.path.srcFolder}/wordpress/`))
     // По умолчанию - отправить спрайт в build
-    .pipe(app.gulp.dest(`${app.path.build.svg}`))
-    .pipe(app.plugins.browsersync.stream())
+      .pipe(app.gulp.dest(`${app.path.build.svg}`))
+    //.pipe(app.plugins.browsersync.stream())
   );
 };

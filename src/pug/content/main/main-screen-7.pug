@@ -1,26 +1,106 @@
 .screen-7.container
-  .title-row
-    h2.title-h1 Портфолио
-    .title__right
-      h3.title-tag видео-отзывы
-  .screen-7__row
-    .screen-7__item
-      .screen-7__img
-        img(src="./assets/img/screen-6-1.webp", alt="")
-      .screen-7__icon
-        img(src="./assets/img/svg/video.svg", alt="")
-    .screen-7__item
-      .screen-7__img
-        img(src="./assets/img/screen-6-1.webp", alt="")
-      .screen-7__icon
-        img(src="./assets/img/svg/video.svg", alt="")
-    .screen-7__item
-      .screen-7__img
-        img(src="./assets/img/screen-6-1.webp", alt="")
-      .screen-7__icon
-        img(src="./assets/img/svg/video.svg", alt="")
-    .screen-7__item
-      .screen-7__img
-        img(src="./assets/img/screen-6-1.webp", alt="")
-      .screen-7__icon
-        img(src="./assets/img/svg/video.svg", alt="")
+  .screen-7__block
+    .title-row
+      h2.title-h1 Портфолио
+      .title__right
+        h3.title-tag видео-отзывы
+    .screen-7__row
+      .screen-7__item.e_video(data-src="")
+        .screen-7__img
+          img(src="./assets/img/screen-6-1.webp", alt="")
+        .screen-7__icon
+          <svg>
+              <use xlink:href="./assets/img/svg/sprite.svg#video"></use>
+          </svg>
+      .screen-7__item.e_video(data-src="")
+        .screen-7__img
+          img(src="./assets/img/screen-6-1.webp", alt="")
+        .screen-7__icon
+          <svg>
+              <use xlink:href="./assets/img/svg/sprite.svg#video"></use>
+          </svg>
+      .screen-7__item.e_video(data-src="")
+        .screen-7__img
+          img(src="./assets/img/screen-6-1.webp", alt="")
+        .screen-7__icon
+          <svg>
+              <use xlink:href="./assets/img/svg/sprite.svg#video"></use>
+          </svg>
+      .screen-7__item.e_video(data-src="")
+        .screen-7__img
+          img(src="./assets/img/screen-6-1.webp", alt="")
+        .screen-7__icon
+          <svg>
+              <use xlink:href="./assets/img/svg/sprite.svg#video"></use>
+          </svg>
+  .screen-7__block.before-after-slider
+    .title-row
+      .slider-btn
+        .slider-btn-prev.swiper-button-prev
+          <svg><use xlink:href="./assets/img/svg/sprite.svg#arrow-slider"></use></svg>
+        .slider-btn-next.swiper-button-next
+          <svg><use xlink:href="./assets/img/svg/sprite.svg#arrow-slider"></use></svg>
+      .title__right
+        h3.title-tag до-после
+    .screen-7__slider.swiper
+      .swiper-wrapper
+        .screen-7__slide.swiper-slide
+          img(src="./assets/img/screen-7-b-a.webp", alt="")
+        .screen-7__slide.swiper-slide
+          img(src="./assets/img/screen-7-b-a.webp", alt="")
+        .screen-7__slide.swiper-slide
+          img(src="./assets/img/screen-7-b-a.webp", alt="")
+        .screen-7__slide.swiper-slide
+          img(src="./assets/img/screen-7-b-a.webp", alt="")
+        .screen-7__slide.swiper-slide
+          img(src="./assets/img/screen-7-b-a.webp", alt="")
+        .screen-7__slide.swiper-slide
+          img(src="./assets/img/screen-7-b-a.webp", alt="")
+        .screen-7__slide.swiper-slide
+          img(src="./assets/img/screen-7-b-a.webp", alt="")
+  .screen-7__block.reviews-slider
+    .title-row
+      .slider-btn
+        .slider-btn-prev.swiper-button-prev
+          <svg><use xlink:href="./assets/img/svg/sprite.svg#arrow-slider"></use></svg>
+        .slider-btn-next.swiper-button-next
+          <svg><use xlink:href="./assets/img/svg/sprite.svg#arrow-slider"></use></svg>
+      .title__right
+        h3.title-tag текстовые отзывы
+    .screen-7__slider.swiper.reviews-slider
+      .swiper-wrapper
+        .screen-7__slide.swiper-slide
+          .screen-7__text
+            p Юлия Владимировна, спасибо за носик! Привыкнуть пока не могу, первый день себя пока не ассоциирую без горбинки. Все кто меня сегодня видели, говорят что очень естественно получилось, красиво. Нос совсем не похож на оперированный. 
+            p И на удивление быстрая реабилитация. Форма носа мне очень идёт. Мы даже порылись в семейном альбоме и обнаружили, что теперь я похожа стала не папу, как раньше, а на дедушку. Я даже засняла реакцию близкой мподруги на изменение...
+          .screen-7__input Сообщение
+        .screen-7__slide.swiper-slide
+          .screen-7__text
+            p Юлия Владимировна, спасибо за носик! Привыкнуть пока не могу, первый день себя пока не ассоциирую без горбинки. Все кто меня сегодня видели, говорят что очень естественно получилось, красиво. Нос совсем не похож на оперированный. 
+            p И на удивление быстрая реабилитация. Форма носа мне очень идёт. Мы даже порылись в семейном альбоме и обнаружили, что теперь я похожа стала не папу, как раньше, а на дедушку. Я даже засняла реакцию близкой мподруги на изменение...
+          .screen-7__input Сообщение
+        .screen-7__slide.swiper-slide
+          .screen-7__text
+            p Юлия Владимировна, спасибо за носик! Привыкнуть пока не могу, первый день себя пока не ассоциирую без горбинки. Все кто меня сегодня видели, говорят что очень естественно получилось, красиво. Нос совсем не похож на оперированный. 
+            p И на удивление быстрая реабилитация. Форма носа мне очень идёт. Мы даже порылись в семейном альбоме и обнаружили, что теперь я похожа стала не папу, как раньше, а на дедушку. Я даже засняла реакцию близкой мподруги на изменение...
+          .screen-7__input Сообщение
+        .screen-7__slide.swiper-slide
+          .screen-7__text
+            p Юлия Владимировна, спасибо за носик! Привыкнуть пока не могу, первый день себя пока не ассоциирую без горбинки. Все кто меня сегодня видели, говорят что очень естественно получилось, красиво. Нос совсем не похож на оперированный. 
+            p И на удивление быстрая реабилитация. Форма носа мне очень идёт. Мы даже порылись в семейном альбоме и обнаружили, что теперь я похожа стала не папу, как раньше, а на дедушку. Я даже засняла реакцию близкой мподруги на изменение...
+          .screen-7__input Сообщение
+        .screen-7__slide.swiper-slide
+          .screen-7__text
+            p Юлия Владимировна, спасибо за носик! Привыкнуть пока не могу, первый день себя пока не ассоциирую без горбинки. Все кто меня сегодня видели, говорят что очень естественно получилось, красиво. Нос совсем не похож на оперированный. 
+            p И на удивление быстрая реабилитация. Форма носа мне очень идёт. Мы даже порылись в семейном альбоме и обнаружили, что теперь я похожа стала не папу, как раньше, а на дедушку. Я даже засняла реакцию близкой мподруги на изменение...
+          .screen-7__input Сообщение
+        .screen-7__slide.swiper-slide
+          .screen-7__text
+            p Юлия Владимировна, спасибо за носик! Привыкнуть пока не могу, первый день себя пока не ассоциирую без горбинки. Все кто меня сегодня видели, говорят что очень естественно получилось, красиво. Нос совсем не похож на оперированный. 
+            p И на удивление быстрая реабилитация. Форма носа мне очень идёт. Мы даже порылись в семейном альбоме и обнаружили, что теперь я похожа стала не папу, как раньше, а на дедушку. Я даже засняла реакцию близкой мподруги на изменение...
+          .screen-7__input Сообщение
+        .screen-7__slide.swiper-slide
+          .screen-7__text
+            p Юлия Владимировна, спасибо за носик! Привыкнуть пока не могу, первый день себя пока не ассоциирую без горбинки. Все кто меня сегодня видели, говорят что очень естественно получилось, красиво. Нос совсем не похож на оперированный. 
+            p И на удивление быстрая реабилитация. Форма носа мне очень идёт. Мы даже порылись в семейном альбоме и обнаружили, что теперь я похожа стала не папу, как раньше, а на дедушку. Я даже засняла реакцию близкой мподруги на изменение...
+          .screen-7__input Сообщение

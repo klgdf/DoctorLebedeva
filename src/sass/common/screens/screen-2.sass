@@ -1,13 +1,35 @@
 .screen-2
   &__row
-    display: flex
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
     gap: 15px
     @media (max-width: 991px)
-      flex-direction: column
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      gap: 12px
+  &__img
+    width: min-content
+    height: min-content
+    margin: 0 auto
   &__item
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     padding: 30px 34px
     text-align: center
     border-radius: var(--br)
     border: 1px solid var(--third)
+    min-height: 376px
+    transition: var(--ts)
+    @media (max-width: 991px)
+      width: 300px
+      padding: 20px
+      min-height: 300px
+    @media (max-width: 540px)
+      flex: 0 1 100%
+      padding: 36px 34px
+    &:hover
+      background: var(--third)
   &__icon
     margin: 0 auto

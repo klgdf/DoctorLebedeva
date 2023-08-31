@@ -1,17 +1,15 @@
 .screen-3
-  &__row
-    display: flex
-    gap: 18px
-    @media (max-width: 991px)
-      flex-direction: column
   &__left
-    @media (max-width: 991px)
+    @media (max-width: 767px)
       order: 2
     & .title-tag
       margin-bottom: 40px
   &__right
-    @media (max-width: 991px)
+    @media (max-width: 767px)
       order: 1
+  &__img
+    & img
+      object-position: 20% 10%
   &__point
     display: flex
     gap: 16px
